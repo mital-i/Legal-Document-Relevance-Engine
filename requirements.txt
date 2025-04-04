@@ -1,0 +1,7 @@
+transformers>=4.28.0
+torch>=2.0.0
+spacy>=3.5.0
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl
+beautifulsoup4>=4.11.0
+pandas>=1.5.0
+datasets>=2.10.0
