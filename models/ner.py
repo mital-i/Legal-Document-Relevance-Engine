@@ -1,5 +1,4 @@
 import re
-import spacy
 
 def implement_legal_ner(text):
     patterns = {
