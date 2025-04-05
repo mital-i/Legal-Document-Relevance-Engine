@@ -3,16 +3,16 @@ streamlit==1.24.0
 
 # NLP Model (Hugging Face Transformers)
 transformers==4.26.1
-torch==2.0.1
+torch==2.2.0
 
 # Data Manipulation
 numpy==1.26.4
 pandas==1.5.3
 
-# Optional: Additional ML tasks (uncomment if needed)
+# Optional: Additional ML tasks (if needed)
 scikit-learn==1.2.2
 
-# Build dependencies (required for some packages)
+# Build dependency required for some packages
 pybind11==2.11.1
 
 # accelerate
