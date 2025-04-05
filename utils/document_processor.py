@@ -29,41 +29,34 @@ def clean_document(text):
     return text.strip()
 
 def segment_document(text):
-    # Split by common section headers in legal documents
-    section_patterns = [
-        r'(ARTICLE [A-Z0-9]+[\.:]|Section [0-9\.]+[\.:]|[0-9]+\.[0-9]+\.)',
-        r'([A-Z][A-Z\s]+[\.:])',  # ALL CAPS HEADERS:
-        r'(\n[IVX]+\.|\n[0-9]+\.)'  # Roman numerals or numbered lists
-    ]
+    # More robust pattern for legal document sections
+    section_headers = re.finditer(r'(ARTICLE\s+[IVXLCDM]+\.?\s*[A-Z][A-Za-z\s]+|[0-9]+\.[0-9]+\s+[A-Z][A-Za-z\s]+)', text)
     
     sections = []
-    last_pos = 0
+    start_positions = []
+    headers = []
     
-    for pattern in section_patterns:
-        matches = list(re.finditer(pattern, text))
+    for match in section_headers:
+        start_positions.append(match.start())
+        headers.append(match.group().strip())
+    
+    # Add the end of the document
+    start_positions.append(len(text))
+    
+    # Create sections based on the header positions
+    for i in range(len(headers)):
+        start = start_positions[i]
+        end = start_positions[i+1] if i+1 < len(start_positions) else len(text)
         
-        for i, match in enumerate(matches):
-            start_pos = match.start()
-            
-            # Find the end position (start of next match or end of text)
-            end_pos = matches[i+1].start() if i < len(matches)-1 else len(text)
-            
-            if start_pos > last_pos:
-                # Add the section header and content
-                section_title = match.group().strip()
-                section_content = text[start_pos:end_pos].strip()
-                sections.append({
-                    "title": section_title,
-                    "content": section_content
-                })
-                
-            last_pos = end_pos
+        section_content = text[start:end].strip()
+        sections.append({
+            "title": headers[i],
+            "content": section_content
+        })
     
-    # If no sections were found with the patterns, try splitting by paragraphs
+    # If no sections found, create one for the entire document
     if not sections:
-        paragraphs = text.split('\n\n')
-        sections = [{"title": f"Paragraph {i+1}", "content": p.strip()} 
-                   for i, p in enumerate(paragraphs) if p.strip()]
+        sections = [{"title": "Entire Document", "content": text}]
     
     return sections
 

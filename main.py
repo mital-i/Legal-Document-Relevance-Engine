@@ -2,6 +2,7 @@ from models.ner import implement_legal_ner
 from models.clause_classifier import ClauseClassifier
 from models.extractor import ObligationRightsExtractor
 from utils.document_processor import segment_document
+import streamlit as st
 class LegalDocumentAnalyzer:
     def __init__(self):
         self.ner = implement_legal_ner
@@ -88,9 +89,44 @@ class LegalDocumentAnalyzer:
         
         return insights
 
+def format_results(results):
+    """Format the analysis to display only summaries without raw legal text."""
+    output = "=== LEGAL DOCUMENT ANALYSIS ===\n\n"
+    
+    # Format entities: print only counts and a few examples
+    output += "KEY ENTITIES FOUND:\n"
+    for entity_type, entity_list in results["entities"].get("grouped_entities", {}).items():
+        if entity_list:
+            count = len(entity_list)
+            examples = entity_list[:-2]
+            output += f"- {entity_type}: {count} found (e.g., {', '.join(examples)})\n"
+    
+    # Format sections: show only the title and classification, not the full text
+    output += "\nDOCUMENT SECTIONS (Clause Classifications):\n"
+    for section in results["sections"]:
+        section_info = section["section_info"]
+        title = section_info.get("section_title", "Unknown Section")
+        classification = section_info.get("classification", "N/A")
+        output += f"- {title} (Type: {classification})\n"
+    
+    # Format personalized insights (if any)
+    if results.get("personalized_insights"):
+        output += "\nPERSONALIZED INSIGHTS:\n"
+        for insight in results["personalized_insights"]:
+            if insight["type"] == "concern_match":
+                output += f"- CONCERN: {insight['concern']} found in section '{insight['section']}'\n"
+            elif insight["type"] == "role_obligation":
+                obligation = insight.get("obligation", "take action")
+                output += f"- OBLIGATION: As a party, you must {obligation} (in section '{insight['section']}')\n"
+    else:
+        output += "\nNo personalized insights available. Try providing a user profile with concerns and role.\n"
+    
+    return output
+
 if __name__ == "__main__":
     # Sample document for testing
-    with open("sample_legal_doc.txt", "r") as f:
+    uploaded_file = st.file_uploader("Uploaded a legal document to analyze")
+    with open(uploaded_file, "r") as f:
         sample_document = f.read()
     
     # Sample user profile
@@ -102,14 +138,17 @@ if __name__ == "__main__":
     # Create analyzer and process document
     analyzer = LegalDocumentAnalyzer()
     results = analyzer.analyze_document(sample_document, user_profile)
+
+    print(format_results(results))
+    st.write(format_results(results))
     
     # Print some results
-    print("Document Entities:")
-    print(results["entities"]["grouped_entities"])
-    print("\nKey Sections by Type:")
-    for section in results["sections"]:
-        print(f"- {section['section_info']['section_title']}: {section['section_info']['classification']}")
+    # print("Document Entities:")
+    # print(results["entities"]["grouped_entities"])
+    # print("\nKey Sections by Type:")
+    # for section in results["sections"]:
+    #     print(f"- {section['section_info']['section_title']}: {section['section_info']['classification']}")
     
-    print("\nPersonalized Insights:")
-    for insight in results["personalized_insights"]:
-        print(f"- {insight['type']}: {insight.get('obligation', insight.get('concern', ''))} in section {insight['section']}")
+    # print("\nPersonalized Insights:")
+    # for insight in results["personalized_insights"]:
+    #     print(f"- {insight['type']}: {insight.get('obligation', insight.get('concern', ''))} in section {insight['section']}")
