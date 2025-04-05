@@ -1,19 +1,21 @@
 # Web App
 streamlit==1.24.0
 
-# NLP Model (Hugging Face Transformers)
+# NLP Model (Hugging Face Transformers) and its Rust-based dependency
 transformers==4.26.1
 torch==2.2.0
+tokenizers==0.13.3
 
 # Data Manipulation
 # numpy==1.26.4
 # pandas==1.5.3
 
-# Optional: Additional ML tasks (if needed)
-scikit-learn==1.2.2
+# Optional: Additional ML tasks (uncomment if needed)
+# scikit-learn==1.2.2
 
 # Build dependency required for some packages
 pybind11==2.11.1
+
 
 # accelerate
 # alembic
