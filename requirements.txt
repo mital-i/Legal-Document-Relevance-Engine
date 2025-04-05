@@ -11,7 +11,6 @@ blis
 build
 cachetools
 CoLT5-attention==0.10.20
-conda-verify==3.4.2
 curated-tokenizers==0.0.9
 curated-transformers==0.1.1
 datasets==3.5.0
