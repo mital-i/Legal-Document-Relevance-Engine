@@ -1,5 +1,5 @@
 # spaCy 3.5.x is required by the model wheels
-spacy>=3.5.0,<3.6.0
+spacy
 
 # Option A: en_core_web_sm (the small, lightweight model)
 # en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl
@@ -8,14 +8,14 @@ spacy>=3.5.0,<3.6.0
 # Uncomment the line below if you want to use the transformer model instead.
 en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.5.0/en_core_web_trf-3.5.0-py3-none-any.whl
 
-beautifulsoup4>=4.11.0
-pandas>=1.5.0
-datasets>=2.10.0
-streamlit==1.24.0
-transformers==4.26.1
-torch==2.0.1
+beautifulsoup4
+pandas
+datasets
+streamlit
+transformers
+torch
 # Pin numpy to a version below 2.0
-numpy>=1.21,<2.0
+numpy
 # If required by other packages (like reflex), pin setuptools and pydantic
-setuptools>=69.1.1,<70.0
-pydantic>=1.10.2,<2.0.0
+setuptools
+pydantic
