@@ -6,8 +6,8 @@ transformers==4.26.1
 torch==2.2.0
 
 # Data Manipulation
-numpy==1.26.4
-pandas==1.5.3
+# numpy==1.26.4
+# pandas==1.5.3
 
 # Optional: Additional ML tasks (if needed)
 scikit-learn==1.2.2
