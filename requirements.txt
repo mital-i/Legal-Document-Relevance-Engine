@@ -1,141 +1,158 @@
-accelerate
-alembic
-altair
-appdirs
-atomicwrites
-axial_positional_embedding
-backports.weakref
-bcolz-zipline
-bidict
-blis
-build
-cachetools
-CoLT5-attention==0.10.20
-curated-tokenizers==0.0.9
-curated-transformers==0.1.1
-datasets==3.5.0
-distlib==0.3.9
-einops==0.8.0
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl#sha256=0964370218b7e1672a30ac50d72cdc6b16f7c867496f1d60925691188f4d2510
-en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.5.0/en_core_web_trf-3.5.0-py3-none-any.whl#sha256=8902305d2ced83d98a8e88efd93ea8970a70dda9bb24b0024a8b798d1cc913d5
-et-xmlfile==1.1.0
-fastapi==0.110.2
-fasttext==0.9.2
-fqdn==1.5.1
-fst-pso==1.8.1
-FuzzyTM==2.0.5
-gitdb==4.0.11
-GitPython==3.1.43
-google==3.0.0
-google-ai-generativelanguage==0.6.10
-google-api-core==2.15.0
-google-api-python-client==2.115.0
-google-auth==2.27.0
-google-auth-httplib2==0.2.0
-google-generativeai==0.8.3
-google-spreadsheet==0.0.6
-googleapis-common-protos==1.62.0
-grpcio==1.60.1
-grpcio-status==1.60.1
-gunicorn==21.2.0
-httplib2==0.22.0
-httptools==0.6.1
-httpx==0.26.0
-igraph==0.11.8
-importlib-metadata==6.11.0
-inflection==0.5.1
-install==1.3.5
-isoduration==20.11.0
-jsonpointer==2.1
-leidenalg==0.10.2
-local-attention==1.9.1
-lxml_html_clean==0.3.1
-Mako==1.3.3
-matplotlib==3.9.2
-miniful==0.0.6
-nh3==0.2.17
-numpy==1.26.4
-oauth2client==4.1.3
-openai==1.11.1
-opencv-python==4.9.0.80
-packaging==23.2
-pathlib_abc==0.1.1
-pathy==0.11.0
-pep8==1.7.1
-Pillow==9.5.0
-pipdeptree==2.16.2
-plotly-express==0.4.1
-ply==3.11
-product-key-memory==0.2.10
-proto-plus==1.23.0
-protobuf==4.25.2
-psutil==5.9.8
-pyasn1-modules==0.2.8
-pybind11==2.11.1
-pydantic==1.10.21
-pydantic_core==2.33.1
-pydeck==0.8.1b0
-PyDispatcher==2.0.5
-pyFUME==0.2.25
-pyls-spyder==0.4.0
-pyMeSHSim==0.0.1
-pymetamap==0.1
-Pympler==1.1
-pyppeteer==0.0.25
-pyproject_hooks==1.0.0
-PyQt5==5.15.10
-PyQtWebEngine==5.15.6
-pyquery==1.4.3
-python-docx==1.1.2
-python-engineio==4.9.0
-python-multipart==0.0.9
-python-socketio==5.11.2
-pytz-deprecation-shim==0.1.0.post0
-rapidfuzz==3.6.1
-readme_renderer==43.0
-redis==5.0.3
-reflex==0.4.8.post1
-reflex-hosting-cli==0.1.12
-reformer-pytorch==1.4.4
-rfc3986==2.0.0
-rsa==4.9
-scikit-base==0.7.8
-simpful==2.11.1
-simple-websocket==1.0.0
-sktime==0.34.1
-smmap==5.0.1
-spacy==3.5.4
-spacy-alignments==0.9.1
-spacy-transformers==1.2.5
-spotipy==2.23.0
-sqlmodel==0.0.16
-starlette==0.37.2
-starlette-admin==0.13.2
+# Web App
 streamlit==1.24.0
-tensorboardX==2.6.2.2
-texttable==1.7.0
-thefuzz==0.22.1
-thinc==8.1.12
-tokenizers==0.13.3
-toml==0.10.2
-tomlkit==0.12.4
-torch==2.0.1
+
+# NLP Model (Hugging Face Transformers)
 transformers==4.26.1
-twine==5.0.0
-typing-inspection==0.4.0
-typing_extensions==4.13.1
-tzlocal==4.3.1
-uri-template==1.3.0
-uritemplate==4.1.1
-utils==1.0.2
-uvicorn==0.20.0
-uvloop==0.19.0
-validators==0.34.0
-virtualenv==20.26.6
-watchdog==4.0.0
-watchfiles==0.21.0
-webcolors==24.8.0
-webencodings==0.5.1
-websockets==12.0
-wsproto==1.2.0
-xlrd==2.0.1
+torch==2.0.1
+
+# Data Manipulation
+numpy==1.26.4
+pandas==1.5.3
+
+# Optional: Additional ML tasks (uncomment if needed)
+scikit-learn==1.2.2
+
+# Build dependencies (required for some packages)
+pybind11==2.11.1
+
+# accelerate
+# alembic
+# altair
+# appdirs
+# atomicwrites
+# axial_positional_embedding
+# backports.weakref
+# bcolz-zipline
+# bidict
+# blis
+# build
+# cachetools
+# CoLT5-attention==0.10.20
+# curated-tokenizers==0.0.9
+# curated-transformers==0.1.1
+# datasets==3.5.0
+# distlib==0.3.9
+# einops==0.8.0
+# en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl#sha256=0964370218b7e1672a30ac50d72cdc6b16f7c867496f1d60925691188f4d2510
+# en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.5.0/en_core_web_trf-3.5.0-py3-none-any.whl#sha256=8902305d2ced83d98a8e88efd93ea8970a70dda9bb24b0024a8b798d1cc913d5
+# et-xmlfile==1.1.0
+# fastapi==0.110.2
+# fasttext==0.9.2
+# fqdn==1.5.1
+# fst-pso==1.8.1
+# FuzzyTM==2.0.5
+# gitdb==4.0.11
+# GitPython==3.1.43
+# google==3.0.0
+# google-ai-generativelanguage==0.6.10
+# google-api-core==2.15.0
+# google-api-python-client==2.115.0
+# google-auth==2.27.0
+# google-auth-httplib2==0.2.0
+# google-generativeai==0.8.3
+# google-spreadsheet==0.0.6
+# googleapis-common-protos==1.62.0
+# grpcio==1.60.1
+# grpcio-status==1.60.1
+# gunicorn==21.2.0
+# httplib2==0.22.0
+# httptools==0.6.1
+# httpx==0.26.0
+# igraph==0.11.8
+# importlib-metadata==6.11.0
+# inflection==0.5.1
+# install==1.3.5
+# isoduration==20.11.0
+# jsonpointer==2.1
+# leidenalg==0.10.2
+# local-attention==1.9.1
+# lxml_html_clean==0.3.1
+# Mako==1.3.3
+# matplotlib==3.9.2
+# miniful==0.0.6
+# nh3==0.2.17
+# numpy==1.26.4
+# oauth2client==4.1.3
+# openai==1.11.1
+# opencv-python==4.9.0.80
+# packaging==23.2
+# pathlib_abc==0.1.1
+# pathy==0.11.0
+# pep8==1.7.1
+# Pillow==9.5.0
+# pipdeptree==2.16.2
+# plotly-express==0.4.1
+# ply==3.11
+# product-key-memory==0.2.10
+# proto-plus==1.23.0
+# protobuf==4.25.2
+# psutil==5.9.8
+# pyasn1-modules==0.2.8
+# pybind11==2.11.1
+# pydantic==1.10.21
+# pydantic_core==2.33.1
+# pydeck==0.8.1b0
+# PyDispatcher==2.0.5
+# pyFUME==0.2.25
+# pyls-spyder==0.4.0
+# pyMeSHSim==0.0.1
+# pymetamap==0.1
+# Pympler==1.1
+# pyppeteer==0.0.25
+# pyproject_hooks==1.0.0
+# PyQt5==5.15.10
+# PyQtWebEngine==5.15.6
+# pyquery==1.4.3
+# python-docx==1.1.2
+# python-engineio==4.9.0
+# python-multipart==0.0.9
+# python-socketio==5.11.2
+# pytz-deprecation-shim==0.1.0.post0
+# rapidfuzz==3.6.1
+# readme_renderer==43.0
+# redis==5.0.3
+# reflex==0.4.8.post1
+# reflex-hosting-cli==0.1.12
+# reformer-pytorch==1.4.4
+# rfc3986==2.0.0
+# rsa==4.9
+# scikit-base==0.7.8
+# simpful==2.11.1
+# simple-websocket==1.0.0
+# sktime==0.34.1
+# smmap==5.0.1
+# spacy==3.5.4
+# spacy-alignments==0.9.1
+# spacy-transformers==1.2.5
+# spotipy==2.23.0
+# sqlmodel==0.0.16
+# starlette==0.37.2
+# starlette-admin==0.13.2
+# streamlit==1.24.0
+# tensorboardX==2.6.2.2
+# texttable==1.7.0
+# thefuzz==0.22.1
+# thinc==8.1.12
+# tokenizers==0.13.3
+# toml==0.10.2
+# tomlkit==0.12.4
+# torch==2.0.1
+# transformers==4.26.1
+# twine==5.0.0
+# typing-inspection==0.4.0
+# typing_extensions==4.13.1
+# tzlocal==4.3.1
+# uri-template==1.3.0
+# uritemplate==4.1.1
+# utils==1.0.2
+# uvicorn==0.20.0
+# uvloop==0.19.0
+# validators==0.34.0
+# virtualenv==20.26.6
+# watchdog==4.0.0
+# watchfiles==0.21.0
+# webcolors==24.8.0
+# webencodings==0.5.1
+# websockets==12.0
+# wsproto==1.2.0
+# xlrd==2.0.1
