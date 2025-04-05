@@ -125,9 +125,15 @@ def format_results(results):
 
 if __name__ == "__main__":
     # Sample document for testing
-    uploaded_file = st.file_uploader("Uploaded a legal document to analyze")
-    with open(uploaded_file, "r") as f:
-        sample_document = f.read()
+    uploaded_file = st.file_uploader("Upload a legal document to analyze")
+    if uploaded_file is not None:
+        # Read the file content directly from the UploadedFile object.
+        file_bytes = uploaded_file.read()
+        sample_document = file_bytes.decode("utf-8")
+        # If your document is encoded in utf-8, decode it to a string.
+    # uploaded_file = st.file_uploader("Uploaded a legal document to analyze")
+    # with open(uploaded_file, "r") as f:
+    #     sample_document = f.read()
     
     # Sample user profile
     user_profile = {
