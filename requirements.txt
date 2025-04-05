@@ -4,9 +4,8 @@ streamlit==1.24.0
 # NLP Model (Hugging Face Transformers) and its Rust-based dependency
 transformers==4.26.1
 torch==2.2.0
-tokenizers --only-binary=:all:
-pillow --only-binary=:all:
-
+tokenizers==0.13.3
+pillow==9.5.0
 
 # Data Manipulation
 # numpy==1.26.4
