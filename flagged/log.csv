@@ -1,0 +1,87 @@
+Upload/Paste Legal Document Text,"Your Concerns (e.g., privacy, liability)","Your Role (e.g., buyer, seller)",Analysis Results,flag,username,timestamp
+"SAMPLE SERVICE AGREEMENT
+
+This SERVICE AGREEMENT (""Agreement"") is made and entered into as of March 15, 2023 (""Effective Date""), by and between ABC Corporation (""Client""), with its principal place of business at 123 Main Street, Anytown, USA, and XYZ Services (""Provider""), with its principal place of business at 456 Market Avenue, Othercity, USA.
+
+WHEREAS, Client desires to engage Provider for professional services, and Provider agrees to render such services under the terms and conditions set forth herein, the parties hereby agree as follows:
+
+ARTICLE I. DEFINITIONS
+
+1.1 ""Services"" means the professional services described in Exhibit A attached hereto.
+1.2 ""Confidential Information"" means any proprietary or confidential information disclosed by either party.
+
+ARTICLE II. SCOPE OF SERVICES
+
+2.1 Provider shall perform the Services diligently and in a professional manner.
+2.2 Client shall provide all necessary cooperation and support to Provider in the performance of the Services.
+
+ARTICLE III. PAYMENT TERMS
+
+3.1 Client shall pay Provider a fee of $10,000 for the Services.
+3.2 Payment shall be due within thirty (30) days of receipt of the invoice.
+3.3 In the event of late payment, Client shall be liable for interest at the rate of 1.5% per month.
+
+ARTICLE IV. CONFIDENTIALITY
+
+4.1 Each party agrees to maintain the confidentiality of all Confidential Information.
+4.2 Confidential Information shall not be disclosed to any third party without the prior written consent of the disclosing party.
+
+ARTICLE V. TERM AND TERMINATION
+
+5.1 This Agreement shall commence on the Effective Date and continue for a period of one (1) year unless terminated earlier.
+5.2 Either party may terminate this Agreement upon thirty (30) days’ written notice.
+5.3 Termination shall not affect any accrued rights or liabilities of either party.
+
+ARTICLE VI. LIABILITY AND INDEMNIFICATION
+
+6.1 Provider shall not be liable for any indirect, incidental, or consequential damages arising out of or in connection with this Agreement.
+6.2 Client agrees to indemnify and hold Provider harmless from any claims, losses, or damages arising out of Client’s use of the Services.
+
+ARTICLE VII. GOVERNING LAW
+
+7.1 This Agreement shall be governed by and construed in accordance with the laws of the State of New York.
+
+IN WITNESS WHEREOF, the parties hereto have executed this Agreement as of the Effective Date.
+
+CLIENT: ABC Corporation
+By: ___________________________
+Name: John Doe
+Title: Chief Executive Officer
+
+PROVIDER: XYZ Services
+By: ___________________________
+Name: Jane Smith
+Title: Director of Operations",liability,,"'=== LEGAL DOCUMENT ANALYSIS ===
+
+KEY ENTITIES FOUND:
+- DATE: 1 found (e.g., March 15, 2023)
+- PARTY: 5 found (e.g., CLIENT, Client)
+- PERSON: 12 found (e.g., New York, Jane Smith
+Title)
+- LOCATION: 2 found (e.g., Othercity, Anytown)
+- TERM: 1 found (e.g., one (1) year)
+
+DOCUMENT SECTIONS (Clause Classifications):
+- ARTICLE I. DEFINITIONS (Type: rights)
+- ARTICLE II. SCOPE OF SERVICES (Type: rights)
+- 2.1 Provider shall perform the Services diligently and in a professional manner (Type: rights)
+- 2.2 Client shall provide all necessary cooperation and support to Provider in the performance of the Services (Type: rights)
+- ARTICLE III. PAYMENT TERMS (Type: rights)
+- 3.1 Client shall pay Provider a fee of (Type: rights)
+- 3.2 Payment shall be due within thirty (Type: rights)
+- 3.3 In the event of late payment (Type: rights)
+- ARTICLE IV. CONFIDENTIALITY (Type: rights)
+- 4.1 Each party agrees to maintain the confidentiality of all Confidential Information (Type: rights)
+- 4.2 Confidential Information shall not be disclosed to any third party without the prior written consent of the disclosing party (Type: rights)
+- ARTICLE V. TERM AND TERMINATION (Type: rights)
+- 5.1 This Agreement shall commence on the Effective Date and continue for a period of one (Type: termination)
+- 5.2 Either party may terminate this Agreement upon thirty (Type: rights)
+- 5.3 Termination shall not affect any accrued rights or liabilities of either party (Type: rights)
+- ARTICLE VI. LIABILITY AND INDEMNIFICATION (Type: rights)
+- 6.1 Provider shall not be liable for any indirect (Type: rights)
+- 6.2 Client agrees to indemnify and hold Provider harmless from any claims (Type: rights)
+- ARTICLE VII. GOVERNING LAW (Type: rights)
+- 7.1 This Agreement shall be governed by and construed in accordance with the laws of the State of New York (Type: termination)
+
+No personalized insights available. Try providing concerns and role.
+",,,2025-04-04 22:06:31.977831
