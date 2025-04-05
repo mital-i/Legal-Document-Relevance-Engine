@@ -1,2 +1,5 @@
 rustc
 cargo
+libjpeg-dev
+zlib1g-dev
+libfreetype6-dev
